@@ -12,12 +12,12 @@ export type Project = {
 };
 
 export const portfolio = {
-  name: "Daniel",
-  handle: "@daniel",
+  name: "Enginron",
+  handle: "@danish",
   location: "India",
   headline: "Developer • Design-minded • Always learning",
   bio: [
-    "I'm Daniel, a developer living in India. I love to code and sometimes break things just to see how they work then (hopefully) fix them better. I'm that rare mix who enjoys both development and design, which means I can make things not just function but actually look good too. Crazy, right?",
+    "I'm Danish, a developer living in India. I love to code and sometimes break things just to see how they work then (hopefully) fix them better. I'm that rare mix who enjoys both development and design, which means I can make things not just function but actually look good too. Crazy, right?",
     "Whether it's building full-stack apps, tweaking UI details, or debugging something at 2 AM with a cup of chai, I'm all in. I'm obsessed with learning always chasing new technologies, solving weird bugs, or just experimenting with something random that popped into my head.",
     "When I'm not deep in code, you'll probably catch me watching movies, playing chess, cycling through the city, lifting weights at the gym, or catching up on some much-needed sleep (which I never get enough of).",
     "Let's be honest I'm still trying to explain my job to my parents in a way that doesn't end with \"beta, computer mein hi kuch karta hai na?\" But hey, maybe one day it'll click.",
@@ -29,9 +29,9 @@ export const portfolio = {
   },
   links: {
     email: "mailto:you@example.com",
-    github: "https://github.com/your-username",
-    linkedin: "https://www.linkedin.com/in/your-profile",
-    x: "https://x.com/your-handle",
+    github: "https://github.com/Daniel001x",
+    linkedin: "https://www.linkedin.com/in/mirza-danish-384b33245/",
+    x: "https://x.com/enginron",
     blog: "#",
     discord: "#",
   },

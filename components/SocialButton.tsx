@@ -22,13 +22,13 @@ export function SocialButton({
   );
 
   const base = cn(
-    "inline-flex h-11 items-center justify-center rounded-xl border border-black/10 bg-white px-4 text-sm font-medium text-zinc-800 shadow-sm transition hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:bg-zinc-900/40",
+    "inline-flex h-11 items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 text-sm font-medium text-zinc-800 transition hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800",
     className,
   );
 
   if (isExternal) {
     return (
-      <a className={base} href={href} target="_blank" rel="noreferrer">
+      <a className={base} href={href} target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     );

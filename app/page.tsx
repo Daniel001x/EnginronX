@@ -9,10 +9,27 @@ function Icon({ children }: { children: React.ReactNode }) {
   return <span className="-ml-1 inline-flex h-5 w-5 items-center">{children}</span>;
 }
 
+// Skill color mapping
+const skillColors: Record<string, string> = {
+  "JavaScript": "bg-yellow-500",
+  "TypeScript": "bg-blue-500",
+  "HTML": "bg-orange-500",
+  "CSS": "bg-blue-400",
+  "React": "bg-cyan-400",
+  "Next.js": "bg-zinc-800 dark:bg-zinc-300",
+  "Express.js": "bg-green-500",
+  "Tailwind CSS": "bg-cyan-400",
+  "Node.js": "bg-green-600",
+  "MongoDB": "bg-green-500",
+  "Git": "bg-red-500",
+  "GitHub": "bg-zinc-800 dark:bg-zinc-300",
+  "Docker": "bg-blue-500",
+};
+
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-10 sm:py-14">
-      <main className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-950 sm:p-10">
+      <main className="rounded-2xl bg-white p-6 dark:bg-zinc-950 sm:p-10">
         {/* HERO */}
         <header className="flex flex-col gap-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
@@ -31,14 +48,14 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
-              <Pill className="border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-900/20 dark:text-emerald-200">
+              <button className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-emerald-100 px-4 text-sm font-medium text-emerald-800 transition hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-200 dark:hover:bg-emerald-900/40">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 {portfolio.cta.availabilityText}
-              </Pill>
+              </button>
 
               <a
                 href={portfolio.cta.cvHref}
-                className="inline-flex h-10 items-center justify-center gap-2 rounded-xl border border-black/10 bg-white px-4 text-sm font-medium text-zinc-800 shadow-sm transition hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:bg-zinc-900/40"
+                className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-zinc-100 px-4 text-sm font-medium text-zinc-800 transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -131,7 +148,7 @@ export default function Home() {
         <section className="mt-12">
           <SectionTitle>Skills</SectionTitle>
           <p className="mt-2 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
-            These are the technologies I’ve learned and worked with. This list is
+            These are the technologies I've learned and worked with. This list is
             constantly evolving as I continue to learn and grow as a developer.
           </p>
 
@@ -144,7 +161,7 @@ export default function Home() {
                 <div className="mt-3 flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <Pill key={item} className="text-xs">
-                      <span className="h-2 w-2 rounded-full bg-indigo-500" />
+                      <span className={`h-2 w-2 rounded-full ${skillColors[item] || "bg-indigo-500"}`} />
                       {item}
                     </Pill>
                   ))}
