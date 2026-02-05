@@ -48,11 +48,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
+              {/* Updated: Green background for availability */}
               <button className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-emerald-100 px-4 text-sm font-medium text-emerald-800 transition hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-200 dark:hover:bg-emerald-900/40">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 {portfolio.cta.availabilityText}
               </button>
 
+              {/* Updated: Gray background, no border for Download CV */}
               <a
                 href={portfolio.cta.cvHref}
                 className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-zinc-100 px-4 text-sm font-medium text-zinc-800 transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
@@ -148,26 +150,29 @@ export default function Home() {
         <section className="mt-12">
           <SectionTitle>Skills</SectionTitle>
           <p className="mt-2 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
-            These are the technologies I've learned and worked with. This list is
+            These are the technologies I ve learned and worked with. This list is
             constantly evolving as I continue to learn and grow as a developer.
           </p>
 
-          <div className="mt-8 space-y-6">
-            {portfolio.skills.map((group) => (
-              <div key={group.label}>
-                <p className="text-xs font-semibold tracking-widest text-zinc-500 dark:text-zinc-400">
-                  &lt; {group.label} /&gt;
-                </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <Pill key={item} className="text-xs">
-                      <span className={`h-2 w-2 rounded-full ${skillColors[item] || "bg-indigo-500"}`} />
-                      {item}
-                    </Pill>
-                  ))}
+          {/* Updated: Added beige/cream background card */}
+          <div className="mt-6 rounded-2xl border border-zinc-200 bg-[#f5f1ed] p-6 dark:border-zinc-800 dark:bg-zinc-900/40">
+            <div className="space-y-6">
+              {portfolio.skills.map((group) => (
+                <div key={group.label}>
+                  <p className="text-xs font-semibold tracking-widest text-zinc-500 dark:text-zinc-400">
+                    &lt; {group.label} /&gt;
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <Pill key={item} className="text-xs">
+                        <span className={`h-2 w-2 rounded-full ${skillColors[item] || "bg-indigo-500"}`} />
+                        {item}
+                      </Pill>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
