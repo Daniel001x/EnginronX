@@ -7,8 +7,11 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  href?: string;
+  liveUrl?: string;  // Live deployed project URL
+  githubUrl?: string;  // GitHub repository URL
   status?: string;
+  // Deprecated: keeping for backwards compatibility
+  href?: string;
 };
 
 export const portfolio = {
@@ -28,7 +31,7 @@ export const portfolio = {
     cvHref: "#",
   },
   links: {
-    email: "danishmirzamirza001@gmail.com",
+    email: "mailto:danishmirzamirza001@gmail.com",
     github: "https://github.com/Daniel001x",
     linkedin: "https://www.linkedin.com/in/mirza-danish-384b33245/",
     x: "https://x.com/enginron",
@@ -64,7 +67,8 @@ export const portfolio = {
         "A fully backend-based URL shortener Built using server-side rendering to handle all logic and responses.",
       tags: ["ServerSide Rendering", "Express.js", "MongoDB"],
       status: "Done",
-      href: "https://short-url-a79d.onrender.com/",
+      liveUrl: "https://short-url-a79d.onrender.com/",
+      githubUrl: "https://github.com/Daniel001x/short-url",  // Add your actual GitHub repo URL
     },
     {
       title: "Task Management App",
@@ -72,7 +76,7 @@ export const portfolio = {
         "Collaborative project management tool with real‑time updates and team features.",
       tags: ["Next.js", "Express.js", "MongoDB"],
       status: "Coming Soon",
-      href: "#",
+      githubUrl: "https://github.com/Daniel001x/task-management",  // Add your actual GitHub repo URL
     },
   ] satisfies Project[],
 };
