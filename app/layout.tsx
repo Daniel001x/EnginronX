@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Enginron",
   description: "Personal portfolio website",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${jetbrainsMono.variable} min-h-screen bg-zinc-50 font-mono antialiased dark:bg-black`}
       >
