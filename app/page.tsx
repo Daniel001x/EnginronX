@@ -34,9 +34,13 @@ export default function Home() {
         <header className="flex flex-col gap-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-5">
-              <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-xl font-semibold text-white">
-                {portfolio.name.slice(0, 1).toUpperCase()}
-              </div>
+            <div className="h-16 w-16 overflow-hidden rounded-full">
+     <img 
+       src="/enginron.jpeg" 
+       alt="Profile" 
+       className="h-full w-full object-cover"
+     />
+   </div>
               <div>
                 <h1 className="text-3xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50">
                   {portfolio.name.toUpperCase()}
