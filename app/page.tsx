@@ -154,7 +154,7 @@ export default function Home() {
         <section className="mt-12">
           <SectionTitle>Skills</SectionTitle>
           <p className="mt-2 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
-            These are the technologies I ve learned and worked with. This list is
+            These are the technologies i have learned and worked with. This list is
             constantly evolving as I continue to learn and grow as a developer.
           </p>
 
