@@ -20,7 +20,7 @@ export const portfolio = {
   location: "India",
   headline: "Developer • Design-minded • Always learning",
   bio: [
-    "I'm Daniel, (Aka danish) a developer living in India. I love to code and sometimes break things just to see how they work then (hopefully) fix them better. I'm that rare mix who enjoys both development and design, which means I can make things not just function but actually look good too. Crazy, right?",
+    "I'm Danish, (Aka daniel) a developer living in India. I love to code and sometimes break things just to see how they work then (hopefully) fix them better. I'm that rare mix who enjoys both development and design, which means I can make things not just function but actually look good too. Crazy, right?",
     "Whether it's building full-stack apps, tweaking UI details, or debugging something at 2 AM with a cup of coffee, I'm all in. I'm obsessed with learning always chasing new technologies, solving weird bugs, or just experimenting with something random that popped into my head.",
     "When I'm not deep in code, you'll probably catch me watching movies, playing chess, cycling through the city, lifting weights at the gym, or catching up on some much-needed sleep (which I never get enough of).",
     "Let's be honest I'm still trying to explain my job to my parents in a way that doesn't end with \"beta, computer mein hi kuch karta hai na?\" But hey, maybe one day it'll click.",
