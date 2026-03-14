@@ -16,11 +16,11 @@ export type Project = {
 
 export const portfolio = {
   name: "Enginron",
-  handle: "@daniel",
+  handle: "@enginron",
   location: "India",
   headline: "Developer • Design-minded • Always learning",
   bio: [
-    "I'm Danish, (Aka daniel) a developer living in India. I love to code and sometimes break things just to see how they work then (hopefully) fix them better. I'm that rare mix who enjoys both development and design, which means I can make things not just function but actually look good too. Crazy, right?",
+    "I'm Danish, a developer living in India. I love to code and sometimes break things just to see how they work then (hopefully) fix them better. I'm that rare mix who enjoys both development and design, which means I can make things not just function but actually look good too. Crazy, right?",
     "Whether it's building full-stack apps, tweaking UI details, or debugging something at 2 AM with a cup of coffee, I'm all in. I'm obsessed with learning always chasing new technologies, solving weird bugs, or just experimenting with something random that popped into my head.",
     "When I'm not deep in code, you'll probably catch me watching movies, playing chess, cycling through the city, lifting weights at the gym, or catching up on some much-needed sleep (which I never get enough of).",
     "Let's be honest I'm still trying to explain my job to my parents in a way that doesn't end with \"beta, computer mein hi kuch karta hai na?\" But hey, maybe one day it'll click.",
@@ -28,7 +28,7 @@ export const portfolio = {
   cta: {
     availabilityText: "Available for new opportunities",
     cvLabel: "Download",
-    cvHref: "Mirza-Danish-Resume.pdf",
+    cvHref: "MirzaDanishresume2026.pdf",
   },
   links: {
     email: "mailto:danishmirzamirza001@gmail.com",
@@ -68,15 +68,16 @@ export const portfolio = {
       tags: ["ServerSide Rendering", "Express.js", "MongoDB"],
       status: "Done",
       liveUrl: "https://short-url-a79d.onrender.com/",
-      githubUrl: "https://github.com/Daniel001x/short-url",  // Add your actual GitHub repo URL
+      githubUrl: "https://github.com/Daniel001x/short-url", 
     },
     {
-      title: "Task Management App",
+      title: "Tars-chat",
       description:
-        "Collaborative project management tool with real‑time updates and team features.",
-      tags: ["Next.js", "Express.js", "MongoDB"],
-      status: "Coming Soon",
-      githubUrl: "https://github.com/Daniel001x/task-management",  // Add your actual GitHub repo URL
+        "A real-time chat app built with Next.js, Convex, and Clerk. Supports 1:1 & group messaging, typing indicators, and online presence.",
+      tags: ["Next.js", "Convex", "Clerk"],
+      status: "Done",
+      liveUrl: "https://tars-chat-pearl.vercel.app/sign-in",
+      githubUrl: "https://github.com/Daniel001x/Tars-chat", 
     },
   ] satisfies Project[],
 };
