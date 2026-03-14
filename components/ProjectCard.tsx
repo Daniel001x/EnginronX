@@ -9,13 +9,13 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-3">
-            <span className="h-3 w-3 flex-shrink-0 rounded bg-zinc-300 dark:bg-zinc-700" />
+            <span className="h-3 w-3 shrink-0 rounded bg-zinc-300 dark:bg-zinc-700" />
             <h3 className="truncate text-base font-semibold text-zinc-900 dark:text-zinc-50">
               {project.title}
             </h3>
             {project.status && (
               <span className={cn(
-                "ml-auto flex-shrink-0 text-xs font-medium",
+                "ml-auto shrink-0 text-xs font-medium",
                 project.status === "Done" 
                   ? "text-green-600 dark:text-green-400" 
                   : "text-orange-600 dark:text-orange-400"
