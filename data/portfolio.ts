@@ -21,16 +21,11 @@ export type Experience = {
   to: string;
 };
 
-// 1. Define Book type here
-// In data/portfolio.ts
-
 export type Book = {
   title: string;
   author: string;
   color: string;
-  cover?: string;   // Add this
-  width?: number;   // Add this (for Next.js Image optimization)
-  height?: number;  // Add this (for Next.js Image optimization)
+  cover?: string;
 };
 
 export const portfolio = {
@@ -107,33 +102,41 @@ export const portfolio = {
       liveUrl: "https://tars-chat-pearl.vercel.app/sign-in",
       githubUrl: "https://github.com/Daniel001x/Tars-chat",
     },
-  ] satisfies Project[],
 
-  // 2. ADDED BOOKS HERE INSIDE THE PORTFOLIO OBJECT
- books: [
-  {
-    title: "The Subtle Art of Not Giving a F*ck",
-    author: "Mark Manson",
-    color: "#E8531A",
-    cover: "/newsub.webp",
-  },
-  {
-    title: "Start with Why",
-    author: "Simon Sinek",
-    color: "#F5C518",
-    cover: "/startwithwhy.webp",
-  },
-  {
-    title: "Do It Today",
-    author: "Darius Foroux",
-    color: "#F0A500",
-    cover: "/do it today.webp",
-  },
-  {
-    title: "The Power of Your Subconscious Mind",
-    author: "Joseph Murphy",
-    color: "#2E86AB",
-    cover: "/thepowerofyour.webp",
-  },
-] satisfies Book[],
+     {
+      title: "Proxxy",
+      description:
+        "Post any task and let a people get your work done for you.",
+      tags: ["React.js", "Express.js", "MongoDB"],
+      status: "Comming soon",
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+  ] satisfies Project[],
+  books: [
+    {
+      title: "The Subtle Art of Not Giving a F*ck",
+      author: "Mark Manson",
+      color: "#E8531A",
+      cover: "/newsub.webp",
+    },
+    {
+      title: "Start with Why",
+      author: "Simon Sinek",
+      color: "#F5C518",
+      cover: "/realstart.jpg",
+    },
+    {
+      title: "Do It Today",
+      author: "Darius Foroux",
+      color: "#F0A500",
+      cover: "/doit.png",
+    },
+    {
+      title: "Deep Work",
+      author: "Cal Newport",
+      color: "#2E86AB",
+      cover: "/deepwork.jpg",
+    },
+  ] satisfies Book[],
 };
