@@ -7,11 +7,30 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  liveUrl?: string;  // Live deployed project URL
-  githubUrl?: string;  // GitHub repository URL
+  liveUrl?: string;
+  githubUrl?: string;
   status?: string;
-  // Deprecated: keeping for backwards compatibility
   href?: string;
+};
+
+export type Experience = {
+  role: string;
+  company: string;
+  type: string;
+  from: string;
+  to: string;
+};
+
+// 1. Define Book type here
+// In data/portfolio.ts
+
+export type Book = {
+  title: string;
+  author: string;
+  color: string;
+  cover?: string;   // Add this
+  width?: number;   // Add this (for Next.js Image optimization)
+  height?: number;  // Add this (for Next.js Image optimization)
 };
 
 export const portfolio = {
@@ -60,6 +79,15 @@ export const portfolio = {
       items: ["Git", "GitHub", "Docker"],
     },
   ] satisfies SkillGroup[],
+  experience: [
+    {
+      role: "Full-Stack Developer",
+      company: "Self-Initiated Projects",
+      type: "Project-Based",
+      from: "2025",
+      to: "Present",
+    },
+  ] satisfies Experience[],
   projects: [
     {
       title: "Short-URL Generator",
@@ -68,7 +96,7 @@ export const portfolio = {
       tags: ["ServerSide Rendering", "Express.js", "MongoDB"],
       status: "Done",
       liveUrl: "https://short-url-a79d.onrender.com/",
-      githubUrl: "https://github.com/Daniel001x/short-url", 
+      githubUrl: "https://github.com/Daniel001x/short-url",
     },
     {
       title: "Tars-chat",
@@ -77,7 +105,35 @@ export const portfolio = {
       tags: ["Next.js", "Convex", "Clerk"],
       status: "Done",
       liveUrl: "https://tars-chat-pearl.vercel.app/sign-in",
-      githubUrl: "https://github.com/Daniel001x/Tars-chat", 
+      githubUrl: "https://github.com/Daniel001x/Tars-chat",
     },
   ] satisfies Project[],
+
+  // 2. ADDED BOOKS HERE INSIDE THE PORTFOLIO OBJECT
+ books: [
+  {
+    title: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    color: "#E8531A",
+    cover: "/newsub.webp",
+  },
+  {
+    title: "Start with Why",
+    author: "Simon Sinek",
+    color: "#F5C518",
+    cover: "/startwithwhy.webp",
+  },
+  {
+    title: "Do It Today",
+    author: "Darius Foroux",
+    color: "#F0A500",
+    cover: "/do it today.webp",
+  },
+  {
+    title: "The Power of Your Subconscious Mind",
+    author: "Joseph Murphy",
+    color: "#2E86AB",
+    cover: "/thepowerofyour.webp",
+  },
+] satisfies Book[],
 };
