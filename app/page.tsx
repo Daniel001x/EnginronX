@@ -1,3 +1,4 @@
+import { MusicButton } from "@/components/MusicButton";
 import { portfolio, type Book } from "@/data/portfolio";
 import { Pill } from "@/components/Pill";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -91,11 +92,12 @@ export default function Home() {
           <p className="text-sm text-zinc-600 dark:text-zinc-300">
             Where to find me <span className="font-semibold">(digitally)</span> if you wish to
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
             <SocialButton href={portfolio.links.email} label="Email Me" icon={<Icon><svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z" /><path d="M22 6l-10 7L2 6" /></svg></Icon>} />
             <SocialButton href={portfolio.links.github} label="GitHub" icon={<Icon><svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.36 6.84 9.71.5.1.68-.22.68-.48 0-.24-.01-.86-.01-1.69-2.78.62-3.37-1.37-3.37-1.37-.45-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1.01.07 1.54 1.06 1.54 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.11.38-2.02 1-2.74-.1-.26-.44-1.3.1-2.71 0 0 .83-.27 2.72 1.05A9.2 9.2 0 0 1 12 6.8c.85 0 1.71.12 2.51.35 1.89-1.32 2.72-1.05 2.72-1.05.54 1.41.2 2.45.1 2.71.62.72 1 1.63 1 2.74 0 3.92-2.34 4.79-4.57 5.05.36.32.69.95.69 1.92 0 1.38-.01 2.5-.01 2.84 0 .26.18.58.69.48A10.05 10.05 0 0 0 22 12.23C22 6.58 17.52 2 12 2z" /></svg></Icon>} />
             <SocialButton href={portfolio.links.linkedin} label="LinkedIn" icon={<Icon><svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5H4.5V23H.5zM8.5 8.5H12.3V10.4h.1c.5-1 1.8-2.1 3.8-2.1 4.1 0 4.9 2.7 4.9 6.2V23h-4V15.6c0-1.8 0-4-2.4-4s-2.8 1.9-2.8 3.9V23h-4V8.5z" /></svg></Icon>} />
             <SocialButton href={portfolio.links.discord} label="Discord" />
+            <MusicButton src="/song.mp3" className="ml-auto" />
           </div>
         </section>
 
