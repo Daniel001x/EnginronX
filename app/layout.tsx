@@ -4,6 +4,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
+
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
@@ -23,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jetbrainsMono.variable} min-h-screen bg-zinc-50 font-mono antialiased dark:bg-black`}
-      >
+  className={`${jetbrainsMono.variable} ${jetbrainsMono.className} min-h-screen bg-zinc-50 font-mono antialiased dark:bg-black`}
+>
         <Script id="theme-init" strategy="beforeInteractive">
           {`(() => {
   try {
@@ -37,6 +38,7 @@ export default function RootLayout({
         </Script>
 
         <Navbar className="mt-4" />
+        
         {children}
       </body>
     </html>

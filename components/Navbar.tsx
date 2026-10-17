@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { portfolio } from "@/data/portfolio";
 import { cn } from "@/lib/cn";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 function ExternalIconLink({
   href,
@@ -27,40 +28,7 @@ function ExternalIconLink({
   );
 }
 
-function IconButton({
-  onClick,
-  label,
-  children,
-}: {
-  onClick: () => void;
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={label}
-      title={label}
-      className="grid h-10 w-10 place-items-center rounded-full text-zinc-700 transition hover:bg-zinc-200/70 dark:text-zinc-200 dark:hover:bg-zinc-800/50"
-    >
-      {children}
-    </button>
-  );
-}
-
 export function Navbar({ className }: { className?: string }) {
-  function toggleTheme() {
-    try {
-      const root = document.documentElement;
-      const next = !root.classList.contains("dark");
-      root.classList.toggle("dark", next);
-      localStorage.setItem("theme", next ? "dark" : "light");
-    } catch {
-      // ignore
-    }
-  }
-
   return (
     <div className={cn("sticky top-4 z-50 flex justify-center", className)}>
       <nav
@@ -127,19 +95,7 @@ export function Navbar({ className }: { className?: string }) {
           My Blog
         </a>
 
-        <IconButton onClick={toggleTheme} label="Toggle theme">
-          <svg
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
-          </svg>
-        </IconButton>
+        <ThemeToggle />
       </nav>
     </div>
   );
