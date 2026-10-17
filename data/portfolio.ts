@@ -42,7 +42,7 @@ export const portfolio = {
   cta: {
     availabilityText: "Available for new opportunities",
     cvLabel: "Download",
-    cvHref: "MirzaDanishresume2026.pdf",
+    cvHref: "Newresumeofmirza_a_.pdf",
   },
   links: {
     email: "mailto:danishmirzamirza001@gmail.com",
