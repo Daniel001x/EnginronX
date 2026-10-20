@@ -101,9 +101,11 @@ export function ThemeToggle() {
   const audioRef = useRef<AudioContext | null>(null);
 
   useEffect(() => {
-    setMounted(true);
-    setIsDark(document.documentElement.classList.contains("dark"));
-  }, []);
+  /* eslint-disable react-hooks/set-state-in-effect */
+  setMounted(true);
+  setIsDark(document.documentElement.classList.contains("dark"));
+  /* eslint-enable react-hooks/set-state-in-effect */
+}, []);
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     const root = document.documentElement;
