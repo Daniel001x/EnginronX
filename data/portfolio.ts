@@ -104,13 +104,13 @@ export const portfolio = {
     },
 
      {
-      title: "Proxxy",
+      title: "Flagify",
       description:
-        "Post any task and let a people get your work done for you.",
-      tags: ["React.js", "Express.js", "MongoDB"],
-      status: "Comming soon",
+        "A multi-tenant feature flag API (Node.js, Express, MongoDB) with JWT auth and role-based access control for safe, per-organization feature rollouts.",
+      tags: ["Node.js", "Express.js", "MongoDB"],
+      status: "Done",
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Daniel001x/Flagify",
     },
   ] satisfies Project[],
   books: [
